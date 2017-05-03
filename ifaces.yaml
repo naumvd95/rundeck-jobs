@@ -11,6 +11,11 @@
       threadcount: 1
     filter: tags:cicd
   nodesSelectedByDefault: true
+  options:
+  - enforced: true
+    name: pretty
+    values:
+    - -p
   scheduleEnabled: true
   sequence:
     commands:
