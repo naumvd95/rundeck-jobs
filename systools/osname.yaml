@@ -1,0 +1,22 @@
+- description: ''
+  executionEnabled: true
+  loglevel: INFO
+  name: osname
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      threadcount: 1
+    filter: tags:cicd
+  nodesSelectedByDefault: true
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /var/rundeck/projects/${job.project}/scm/scripts/osname.py
+    keepgoing: false
+    pluginConfig:
+      WorkflowStrategy:
+        node-first: null
+    strategy: node-first
