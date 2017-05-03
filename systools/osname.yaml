@@ -14,7 +14,7 @@
   scheduleEnabled: true
   sequence:
     commands:
-    - scriptfile: /var/rundeck/projects/${job.project}/scm/scripts/osname.py
+    - scriptfile: /var/rundeck/projects/cicd/scm/scripts/osname.py
     keepgoing: false
     pluginConfig:
       WorkflowStrategy:
