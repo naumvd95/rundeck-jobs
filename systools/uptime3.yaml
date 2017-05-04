@@ -2,6 +2,7 @@
   executionEnabled: true
   group: systools
   loglevel: INFO
+  name: uptime33333333333
   nodeFilterEditable: false
   nodefilters:
     dispatch:
