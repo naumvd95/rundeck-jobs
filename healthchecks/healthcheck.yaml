@@ -28,7 +28,7 @@
   - name: HEALTHCHECK_REPO
     value: https://github.com/naumvd95/test-health.git
   - name: CONFIG_PATH
-    value: etc/config.json
+    value: test-health/devops_portal_tests/etc/env_config.json.sample
   - name: HEALTHCHECK
     value: healthcheck
     values:
