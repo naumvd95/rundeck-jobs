@@ -6,6 +6,7 @@ sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev libyaml
 
 sudo pip install virtualenv
 cd test-health/devops_portal_tests
+git pull
 sudo virtualenv venv-devops-portal-test
 source venv-devops-portal-test/bin/activate
 pip install -r requirements.txt
