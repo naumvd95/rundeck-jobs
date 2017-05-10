@@ -38,7 +38,7 @@
   scheduleEnabled: true
   sequence:
     commands:
-    - exec: git clone ${option.HEALTHCHECK_REPO}
+    - exec: ls -a test-health || git clone ${option.HEALTHCHECK_REPO}
     - scriptfile: /var/rundeck/projects/cicd/scm/scripts/env_setup.sh
     keepgoing: false
     pluginConfig:
