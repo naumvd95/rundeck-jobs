@@ -1,8 +1,8 @@
 - description: |
     Performs an automatic healthcheck service
     
-    This is <b>HealthCheck</b>
-    <ul><li> list for DevOps Portal </li></ul>
+    This is <b>HealthCheck</b> list for DevOps Portal
+    <ul><li> Available checks </li></ul>
     
     <a href="/">Top</a>
     
@@ -11,7 +11,7 @@
     3. ElasticSearch Healthcheck
     4. etc... 
     
-    [a link](http://example.com) 
+    [Doc link](https://bitbucket.org/snovikov/devops-portal-pytest/src)
   name: DevopsPortal_Health
   executionEnabled: true
   group: systools
@@ -26,17 +26,14 @@
     filter: tags:cicd
   nodesSelectedByDefault: true
   options:
-  - enforced: true
-    name: pretty
-    values:
-    - -p
+  - name: CONFIG_PATH
+    value: config.json
+  - name: HEALTHCHECK
+    value: healthcheck
   scheduleEnabled: true
   sequence:
     commands:
     - scriptfile: /var/rundeck/projects/cicd/scm/scripts/env_setup.sh
-      args: |
-        HEALTHCHECK=healthcheck
-        CONFIG_FILE_PATH=config.json
     keepgoing: false
     pluginConfig:
       WorkflowStrategy:

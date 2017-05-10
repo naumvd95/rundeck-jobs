@@ -6,5 +6,5 @@ virtualenv venv-devops-portal-test
 source venv-devops-portal-test/bin/activate
 pip install -r requirements.txt
 pip install -r test-requirements.txt
-
+export CONFIG_FILE_PATH=$CONFIG_PATH
 pytest -m $HEALTHCHECK
