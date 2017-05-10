@@ -1,0 +1,44 @@
+- description: |
+    Performs an automatic healthcheck service
+    
+    This is <b>HealthCheck</b>
+    <ul><li> list for DevOps Portal </li></ul>
+    
+    <a href="/">Top</a>
+    
+    1. Haproxy Healthcheck
+    2. Ldap Healthcheck
+    3. ElasticSearch Healthcheck
+    4. etc... 
+    
+    [a link](http://example.com) 
+  name: DevopsPortal_Health
+  executionEnabled: true
+  group: systools
+  loglevel: INFO
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: true
+      rankOrder: ascending
+      threadcount: 1
+    filter: tags:cicd
+  nodesSelectedByDefault: true
+  options:
+  - enforced: true
+    name: pretty
+    values:
+    - -p
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /var/rundeck/projects/cicd/scm/scripts/env_setup.sh
+      args: |
+        HEALTHCHECK=healthcheck
+        CONFIG_FILE_PATH=config.json
+    keepgoing: false
+    pluginConfig:
+      WorkflowStrategy:
+        node-first: null
+    strategy: node-first

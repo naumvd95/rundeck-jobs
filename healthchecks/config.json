@@ -1,0 +1,52 @@
+{
+  "services": {
+    "haproxy":{
+    "endpoint": "http://172.16.10.254:9600/"
+    },
+    "elasticsearch": {
+      "endpoint": "http://172.16.10.254:9200/"
+    },
+    "gerrit": {
+      "endpoint": "http://172.16.10.254:8080/"
+    },
+    "jenkins": {
+      "endpoint": "http://172.16.10.254:8081/"
+    },
+    "pushkin": {
+      "endpoint": "http://172.16.10.254:8887/"
+    },
+    "rundeck": {
+      "endpoint": "http://172.16.10.254:4440/",
+      "credentials": {
+          "token": "password",
+          "username": "admin",
+          "password": "password"
+        }
+    },
+    "ldap": {
+      "endpoint": "ldap://172.16.10.254:389/",
+      "credentials": {
+          "username": "cn=admin,dc=cicd-lab-dev,dc=local",
+          "password": "password",
+          "base_dn": "ou=people,dc=cicd-lab-dev,dc=local"
+        }
+    }
+  },
+  "nodes":{
+    "ci01":{
+      "ip": "172.16.10.11",
+      "username": "root",
+      "pkey": "private_key"
+      },
+    "ci02":{
+      "ip": "172.16.10.12",
+      "username": "root",
+      "pkey": "private_key"
+    },
+    "ci03":{
+      "ip": "172.16.10.13",
+      "username": "root",
+      "pkey": "private_key"
+    }
+  }
+}

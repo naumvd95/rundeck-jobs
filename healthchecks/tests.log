@@ -1,0 +1,7 @@
+2017-05-10 06:34:49 - DEBUG test_ldap.py:27 -- user authenticated successfully
+2017-05-10 06:34:49 - DEBUG test_ldap.py:76 -- user created successfully
+2017-05-10 06:34:49 - INFO test_ldap.py:97 -- try to authenticate with new user
+2017-05-10 06:34:49 - DEBUG test_ldap.py:27 -- user authenticated successfully
+2017-05-10 06:34:49 - INFO test_ldap.py:100 -- remove created user, using admin-dn
+2017-05-10 06:34:49 - DEBUG test_ldap.py:27 -- user authenticated successfully
+2017-05-10 06:34:49 - DEBUG test_ldap.py:81 -- user removed successfully
