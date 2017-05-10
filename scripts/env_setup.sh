@@ -3,8 +3,7 @@ sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev libyaml
 
 sudo pip install virtualenv
 sudo virtualenv venv-devops-portal-test
-ls -al
-cd /var/rundeck/projects/cicd/scm/healthchecks
+cd test-health/devops_portal_tests
 source venv-devops-portal-test/bin/activate
 pip install -r requirements.txt
 pip install -r test-requirements.txt

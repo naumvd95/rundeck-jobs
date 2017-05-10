@@ -2,7 +2,6 @@
     Performs an automatic healthcheck service
     
     This is <b>HealthCheck</b> list for DevOps Portal
-    <ul><li> Available checks </li></ul>
     
     <a href="/">Top</a>
     
@@ -26,13 +25,20 @@
     filter: tags:cicd
   nodesSelectedByDefault: true
   options:
+  - name: HEALTHCHECK_REPO
+    value: https://github.com/naumvd95/test-health.git
   - name: CONFIG_PATH
-    value: config.json
+    value: etc/config.json
   - name: HEALTHCHECK
     value: healthcheck
+    values:
+    - elasticsearch_healthcheck
+    - rundeck_healthcheck
+    - ldap_healthcheck
   scheduleEnabled: true
   sequence:
     commands:
+    - exec: git clone ${option.HEALTHCHECK_REPO}
     - scriptfile: /var/rundeck/projects/cicd/scm/scripts/env_setup.sh
     keepgoing: false
     pluginConfig:
